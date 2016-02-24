@@ -130,15 +130,15 @@ public class InstallCert {
             System.out.println();
         }
 
-        System.out.println("Enter certificate to add to trusted keystore or 'q' to quit: [1]");
-        String line = reader.readLine().trim();
-        int k;
-        try {
-            k = (line.length() == 0) ? 0 : Integer.parseInt(line) - 1;
-        } catch (NumberFormatException e) {
-            System.out.println("KeyStore not changed");
-            return;
-        }
+        // System.out.println("Enter certificate to add to trusted keystore or 'q' to quit: [1]");
+        // String line = reader.readLine().trim();
+        int k = 0;
+        // try {
+        //     k = (line.length() == 0) ? 0 : Integer.parseInt(line) - 1;
+        // } catch (NumberFormatException e) {
+        //     System.out.println("KeyStore not changed");
+        //     return;
+        // }
 
         X509Certificate cert = chain[k];
         String alias = host + "-" + (k + 1);
